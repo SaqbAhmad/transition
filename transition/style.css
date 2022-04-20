@@ -1,0 +1,48 @@
+section{
+      height:150px;
+      width: 150px;
+      border:4px solid black;
+      background-color: palevioletred;
+      /* transition: 1s; */
+      /* we are applying transition on border radious.we can apply on multiple property or all property. */
+      /* transition-property:border-radius,background-color; */
+        transition-property: all;
+      /* what is the duration of transition for the above property(mention property like background-color) */
+        /* transition-duration 1s;
+        transition-delay: 1s;
+        transition-timing-function:ease-in; */
+        /* shorthand property */
+        transition: all 1s ease-in 1s;
+}
+section:hover{
+      border-radius: 50%;
+      background-color: aqua;
+}
+article{
+    border: 1px solid #ccc;
+    margin:10px;
+}
+article div{
+    height:70px;
+    width:70px;
+    border: 4px solid black;
+    background-color:aqua;
+    margin:10px;
+    transition: 2s;
+}
+article:hover div{
+      margin-left: 400px;
+}
+/* in case of ease in first move slow then fast and vice-versa */
+div:nth-of-type(1){
+     transition-timing-function: ease-in;
+}
+div:nth-of-type(2){
+    transition-timing-function: ease-out;
+}
+div:nth-of-type(3){
+     transition-timing-function: linear;
+}
+div:nth-of-type(4){
+    transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
